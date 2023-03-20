@@ -17,8 +17,8 @@
           <template slot="items" slot-scope="props">
             <tr @click="rowClicked(props.item.id)">
               <td>{{ props.item.year }}</td>
-              <td>{{ props.item.make }}</td>
-              <td>{{ props.item.model }}</td>
+              <td>{{ props.item.brand.name }}</td>
+              <td>{{ props.item.model.name }}</td>
             </tr>
           </template>
         </v-data-table>

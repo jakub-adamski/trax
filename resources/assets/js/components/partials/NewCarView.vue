@@ -2,7 +2,12 @@
   <v-form ref="form" v-model="valid" lazy-validation>
     <v-text-field
       v-model="year"
-      :rules="[v => !!v  || 'Item is required', v => (v && v.length === 4 && !isNaN(v)) || 'Must be 4 digit year']"
+      :rules="[
+        v => !!v || 'Item is required',
+        v => (v && v.length === 4 && !isNaN(v)) || 'Must be 4 digit year',
+        v => (v && parseInt(v) >= 1900) || `Must be not lower than 1900`,
+        v => (v && parseInt(v) <= parseInt(new Date().getFullYear())) || `Must be not greater than ${new Date().getFullYear()}`
+        ]"
       label="Year"
       required
     ></v-text-field>
@@ -61,7 +66,6 @@ export default {
     clear() {
       this.$refs.form.reset()
     }
-
   },
 }
 </script>

@@ -50,10 +50,10 @@ export default {
       axios.get(traxAPI.getCarEndpoint(this.$route.params.id))
         .then(response => {
           this.year = response.data.data.year;
-          this.make = response.data.data.make;
-          this.model = response.data.data.model;
-          this.trip_count = response.data.data.trip_count;
-          this.trip_miles = response.data.data.trip_miles;
+          this.make = response.data.data.brand.name;
+          this.model = response.data.data.model.name;
+          this.trip_count = response.data.data.trips.length;
+          this.trip_miles = response.data.data.miles_total;
         })
         .catch(e => {
           console.log(e);

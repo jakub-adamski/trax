@@ -57,6 +57,22 @@ services:
       - PHP_PORT=9002:9000
     depends_on:
       - php
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: trax_phpmyadmin
+    restart: on-failure
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    ports:
+      - '8081:80'
+    depends_on:
+      - db
+    networks:
+      main:
+        aliases:
+          - phpmyadmin
 volumes:
   mysql_data:
 networks:
