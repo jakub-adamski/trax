@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CarTripFactory extends Factory
 {
-    protected string $model = CarTrip::class;
+    protected $model = CarTrip::class;
 
     public function definition(): array
     {

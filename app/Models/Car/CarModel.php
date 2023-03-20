@@ -28,12 +28,12 @@ class CarModel extends Model implements SluggableInterface
 
     public $table = 'cars_models';
 
-    protected array $fillable = [
+    protected $fillable = [
         'name',
         'name_slug'
     ];
 
-    protected array $casts = [
+    protected $casts = [
         'id' => 'integer',
         'name' => 'string',
         'name_slug' => 'string',

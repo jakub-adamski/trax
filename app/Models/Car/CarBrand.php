@@ -26,14 +26,14 @@ class CarBrand extends Model implements SluggableInterface
     use HasFactory;
     use Sluggable;
 
-    public string $table = 'cars_brands';
+    public $table = 'cars_brands';
 
-    protected array $fillable = [
+    protected $fillable = [
         'name',
         'name_slug'
     ];
 
-    protected array $casts = [
+    protected $casts = [
         'id' => 'integer',
         'name' => 'string',
         'name_slug' => 'string',

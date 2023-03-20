@@ -30,16 +30,16 @@ class Car extends Model
 {
     use HasFactory;
 
-    public string $table = 'cars';
+    public $table = 'cars';
 
-    protected array $fillable = [
+    protected $fillable = [
         'user_id',
         'brand_id',
         'model_id',
         'year'
     ];
 
-    protected array $casts = [
+    protected $casts = [
         'id' => 'integer',
         'user_id' => 'integer',
         'brand_id' => 'integer',
@@ -47,7 +47,7 @@ class Car extends Model
         'year' => 'integer'
     ];
 
-    protected array $appends = [
+    protected $appends = [
         'miles_total'
     ];
 

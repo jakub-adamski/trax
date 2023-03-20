@@ -23,15 +23,15 @@ class CarTrip extends Model
 {
     use HasFactory;
 
-    public string $table = 'cars_trips';
+    public $table = 'cars_trips';
 
-    protected array $fillable = [
+    protected $fillable = [
         'car_id',
         'miles',
         'date'
     ];
 
-    protected array $casts = [
+    protected $casts = [
         'id' => 'integer',
         'car_id' => 'integer',
         'miles' => 'float',

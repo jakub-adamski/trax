@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
  */
 class CarBrandFactory extends Factory
 {
-    protected string $model = CarBrand::class;
+    protected $model = CarBrand::class;
 
     public function definition(): array
     {

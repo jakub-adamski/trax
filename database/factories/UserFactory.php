@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class UserFactory extends Factory
 {
-    protected string $model = User::class;
+    protected $model = User::class;
 
     public function definition(): array
     {
