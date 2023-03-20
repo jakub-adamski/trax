@@ -16,9 +16,9 @@
         >
           <template slot="items" slot-scope="props">
             <td>{{ props.item.date }}</td>
-            <td>{{ props.item.car.year + ' ' + props.item.car.make + ' ' + props.item.car.model }}</td>
+            <td>{{ props.item.car.year + ' ' + props.item.car.brand.name + ' ' + props.item.car.model.name }}</td>
             <td>{{ props.item.miles }}</td>
-            <td>{{ props.item.total }}</td>
+            <td>{{ props.item.car.miles_total }}</td>
           </template>
         </v-data-table>
       </v-flex>

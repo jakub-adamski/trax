@@ -1,23 +1,34 @@
 // Mock endpoints to be changed with actual REST API implementation
+
+const urlPrefix = '/api';
+
 let traxAPI = {
-  getCarsEndpoint() {
-    return '/api/mock-get-cars'
-  },
+  // Cars
   getCarEndpoint(id) {
-    return '/api/mock-get-car' + '/' + id;
+    return `${urlPrefix}/car/${id}`;
+  },
+  getCarsEndpoint() {
+    return `${urlPrefix}/cars`;
   },
   addCarEndpoint() {
-    return '/api/mock-add-car';
+    return `${urlPrefix}/car/create`;
   },
   deleteCarEndpoint(id) {
-    return '/api/mock-delete-car' + '/' + id;
+    return `${urlPrefix}/car/delete/${id}`;
+  },
+  // Cars trips
+  getTripEndpoint(id) {
+    return `${urlPrefix}/car/trip/${id}`;
   },
   getTripsEndpoint() {
-    return '/api/mock-get-trips';
+    return `${urlPrefix}/cars/trips`;
   },
   addTripEndpoint() {
-    return 'api/mock-add-trip'
+    return `${urlPrefix}/car/trip/create`;
+  },
+  deleteTripEndpoint(id) {
+    return `${urlPrefix}/car/trip/delete/${id}`;
   }
-}
+};
 
 export {traxAPI};

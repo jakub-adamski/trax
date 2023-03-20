@@ -65,7 +65,7 @@ export default {
           for (let i = 0; i < response.data.data.length; i++) {
             let car = response.data.data[i];
             cars.push({
-              text: car.year + ' ' + car.make + ' ' + car.model,
+              text: car.year + ' ' + car.brand.name + ' ' + car.model.name,
               value: car.id
             });
           }
